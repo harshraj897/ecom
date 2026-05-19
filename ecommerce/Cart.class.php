@@ -4,14 +4,7 @@ if(!session_id()){
     session_start(); 
 } 
  
-/** 
- * Shopping Cart Class 
- * 
- * @package        PHP Library 
- * @category    Shopping Cart 
- * @author        CodexWorld Dev Team 
- * @link        https://www.codexworld.com 
- */ 
+
 class Cart { 
     protected $cart_contents = array(); 
      
@@ -24,11 +17,7 @@ class Cart {
         } 
     } 
      
-    /** 
-     * Cart Contents: Returns the entire cart array 
-     * @param    bool 
-     * @return    array 
-     */ 
+    /
     public function contents(){ 
         // rearrange the newest first 
         $cart = array_reverse($this->cart_contents); 
@@ -173,12 +162,7 @@ class Cart {
             return TRUE; 
         } 
     } 
-     
-    /** 
-     * Remove Item: Removes an item from the cart 
-     * @param    int 
-     * @return    bool 
-     */ 
+    
      public function remove($row_id){ 
         // unset & save 
         unset($this->cart_contents[$row_id]); 
